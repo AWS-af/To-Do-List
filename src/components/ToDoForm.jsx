@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import '../app.scss'
 
 function ToDoForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : "");
@@ -20,19 +21,19 @@ function ToDoForm(props) {
   }
   return (
     <div className="form_container" onSubmit={handleSubmit}>
-      <form>
+      <form className="form">
         {props.edit ? (
           <>
             <input
               type="text"
               name="text"
               value={input}
-              className="fomr_input"
+              className="fomr_input_edit"
               placeholder="Edit Text"
               onChange={handleChange}
               ref={inputRef}
             />
-            <input type="submit" value="update to do" className="form_button" />
+            <input type="submit" value="Update to do" className="form_button_edit" />
           </>
         ) : (
           <>
