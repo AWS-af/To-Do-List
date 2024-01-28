@@ -20,8 +20,8 @@ function ToDoForm(props) {
     setInput("");
   }
   return (
-    <div className="form_container" onSubmit={handleSubmit}>
-      <form className="form">
+    <div className="form_container">
+      <form className="form" onSubmit={handleSubmit}>
         {props.edit ? (
           <>
             <input

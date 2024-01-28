@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ToDoForm from "./ToDoForm";
 import MyToDo from "./MyToDo";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 function ToDoList() {
   const [todos, setTodos] = useState([]);
@@ -43,6 +44,14 @@ function ToDoList() {
         removeTodo={removeTodo}
         updateTodo={updateTodo}
       />
+      <div className="social_links">
+        <a href="https://github.com/AWS-af" target="_blank">
+          <FaGithub />
+        </a>
+        <a href="https://linkedin.com/in/ab-siddiqui-b90392270" target="_blank">
+          <FaLinkedinIn />
+        </a>
+      </div>
     </div>
   );
 }
